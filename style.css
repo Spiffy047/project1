@@ -1,47 +1,17 @@
-/*
- * Genvee Green Custom Styles
- * This file defines the custom look and feel for the Genvee Green website,
- * building upon Bootstrap's framework.
- *
- * Color Palette (derived from logo):
- * --primary-green: #8BC34A (Vibrant Lime Green from leaf/globe)
- * --dark-green-teal: #2E4A3F (Dark green/teal from text "GENVEE GREEN LIMITED")
- * --light-grey: #f0f2f5
- * --white: #ffffff
- * --text-dark: #333
- * --text-light: #555
- */
-
-:root {
-    --primary-green: #8BC34A;
-    --dark-green-teal: #2E4A3F; /* Updated to match logo text color */
-    --light-grey: #f0f2f5;
-    --white: #ffffff;
-    --text-dark: #333;
-    --text-light: #555;
-}
-
+/* Custom Fonts & Global Styles */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--light-grey);
-    color: var(--text-dark);
     line-height: 1.6;
-    padding-top: 76px; /* Adjust for fixed navbar height */
+    color: #333; /* Darker text for readability */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
-    color: var(--dark-green-teal); /* Changed to dark green/teal */
-    font-weight: 700;
-}
-
+/* Ensure all section headings are centered */
 .section-heading {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--dark-green-teal); /* Changed to dark green/teal */
+    font-weight: 700;
+    color: #1A2B3C; /* Dark blue for headings */
     position: relative;
     padding-bottom: 15px;
-    margin-bottom: 4rem;
+    text-align: center; /* Explicitly center the heading text */
 }
 
 .section-heading::after {
@@ -50,409 +20,373 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-green);
-    border-radius: 2px;
+    width: 60px;
+    height: 3px;
+    background-color: #8BC34A; /* Genvee Green's primary color */
+    border-radius: 5px;
 }
 
-/* --- Navigation Bar --- */
+/* Navbar Styles */
 .custom-navbar {
-    background-color: var(--white) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    background-color: #fff !important; /* Ensure white background */
 }
 
 .navbar-brand {
-    font-weight: 800;
-    font-size: 1.6rem;
-    color: var(--dark-green-teal) !important; /* Changed to dark green/teal */
-    transition: color 0.3s ease;
+    font-weight: 700;
+    color: #1A2B3C !important;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand img {
-    height: 40px;
-    width: 40px;
+    height: 90px;
+    width: 220px;
     object-fit: cover;
-    border: 2px solid var(--primary-green); /* Border matches primary green */
+    border: 2px solid #8BC34A; /* Green border for the logo */
 }
 
-.navbar-brand:hover {
-    color: var(--primary-green) !important; /* Hover to primary green */
-}
-
-.nav-link {
-    color: var(--text-light) !important;
+.navbar-nav .nav-link {
+    color: #1A2B3C !important;
     font-weight: 500;
-    margin: 0 0.7rem;
-    padding-bottom: 0.5rem;
+    margin: 0 10px;
     transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
 }
 
-.nav-link:hover {
-    color: var(--primary-green) !important;
-    border-bottom: 2px solid var(--primary-green);
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #457344 !important;
+    border-bottom: 2px solid #26964b;
 }
 
-.nav-link.active {
-    color: var(--primary-green) !important;
-    font-weight: 700;
-    border-bottom: 2px solid var(--primary-green);
-}
-
-/* --- Hero Section --- */
+/* Hero Section */
 .hero-section {
-    /* Using a placeholder image with dark green/teal background matching the logo */
-    background: linear-gradient(rgba(46, 74, 63, 0.8), rgba(46, 74, 63, 0.8)), url('https://placehold.co/1920x800/2E4A3F/ffffff?text=Genvee+Green+Hero') no-repeat center center;
-    background-size: cover;
+    /* Updated background image with a more generic placeholder */
+    background: linear-gradient(rgba(11, 149, 87, 0.7), rgba(119, 209, 129, 0.7)), url('https://via.placeholder.com/1920x1080/1A2B3C/ffffff?text=Digital+Transformation') no-repeat center center/cover;
     min-height: 80vh;
-    color: var(--white);
+    padding: 100px 0;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Ensure hero text is centered */
 }
 
 .hero-section h1 {
-    font-size: 3.8rem;
-    color: var(--white);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 3.5rem;
+    line-height: 1.2;
 }
 
-.hero-section .lead {
+.hero-section p.lead {
     font-size: 1.5rem;
-    font-weight: 300;
 }
 
-/* --- Custom Button --- */
 .custom-button {
-    background-color: var(--primary-green);
-    border-color: var(--primary-green);
-    color: var(--white);
-    padding: 0.8rem 2.5rem;
-    font-size: 1.1rem;
+    background-color: #8BC34A;
+    border-color: #8BC34A;
+    font-weight: 600;
+    padding: 12px 30px;
     border-radius: 50px;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(139, 195, 74, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .custom-button:hover {
-    background-color: #7CB342; /* Slightly darker green */
-    border-color: #7CB342;
+    background-color: #7BB03D; /* Slightly darker green on hover */
+    border-color: #7BB03D;
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(139, 195, 74, 0.6);
 }
 
-/* --- Section Styling --- */
-section {
-    padding: 80px 0;
+/* About Section */
+.about-section {
+    background-color: #f8f9fa; /* Light background for contrast */
 }
 
-.about-section,
-.team-section {
-    background-color: var(--white);
+.about-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* For smaller screens, ensure image is centered if it doesn't take full width */
+    display: block;
+    margin: 0 auto;
 }
 
-.services-section,
-.clients-section,
-.contact-section {
-    background-color: var(--light-grey);
-}
-
-/* --- Image Styling --- */
-img.rounded {
-    border-radius: 0.75rem !important;
-}
-
-img.shadow-lg {
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
-}
-
-/* --- About Section Specifics --- */
 .mission-vision-card {
     border: none;
     border-radius: 10px;
-    padding: 1.5rem;
-    background-color: var(--white);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    /* Ensure content within card is aligned if necessary, though left-aligned text is typical here */
 }
 
 .mission-vision-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .mission-vision-card .card-title {
-    color: var(--dark-green-teal); /* Changed to dark green/teal */
-    font-size: 1.4rem;
-    font-weight: 600;
+    color: #1A2B3C; /* Dark blue for card titles */
+    font-weight: 700;
 }
 
-.mission-vision-card i {
-    color: var(--primary-green);
-    font-size: 1.8rem;
-    vertical-align: middle;
+.mission-vision-card .card-text ul {
+    padding-left: 20px;
+    list-style: disc;
 }
 
-/* --- Services Section Specifics --- */
+.mission-vision-card .card-text ul li {
+    margin-bottom: 5px;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #fff;
+}
+
 .service-card {
-    background-color: var(--white);
-    border: 1px solid #7d7c7c;
+    border: 1px solid #e9ecef;
     border-radius: 10px;
-    padding: 2rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #fff;
+    min-height: 220px; /* Ensure consistent height for cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content vertically and horizontally within the card */
+    text-align: center; /* Center text within the card */
+    padding: 20px; /* Add some padding */
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-green);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background-color: #8BC34A; /* Green background on hover */
+    color: #fff;
+}
+
+.service-card:hover .service-icon {
+    color: #fff; /* White icon on hover */
+}
+
+.service-card:hover h4,
+.service-card:hover p { /* Also make paragraph white on hover */
+    color: #fff;
 }
 
 .service-icon {
-    font-size: 3.5rem;
-    color: var(--primary-green);
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #8BC34A; /* Genvee Green color for icons */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
 }
 
 .service-card h4 {
-    color: var(--dark-green-teal); /* Changed to dark green/teal */
-    font-size: 1.3rem;
+    color: #1A2B3C; /* Dark blue for service headings */
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-/* --- Team Section Specifics --- */
+/* Team Section */
+.team-section {
+    background-color: #f8f9fa;
+}
+
 .team-card {
-    background-color: var(--white);
     border: none;
     border-radius: 10px;
-    padding: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    min-height: 350px; /* Adjust as needed for content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content vertically and horizontally within the card */
+    text-align: center; /* Center text within the card */
+    padding: 20px;
 }
 
 .team-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .team-member-img {
-    border: 3px solid var(--primary-green);
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    transition: border-color 0.3s ease;
+    border: 4px solid #8BC34A; /* Green border for team images */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Add space below image */
 }
 
-.team-card:hover .team-member-img {
-    border-color: var(--dark-green-teal); /* Hover to dark green/teal */
+.team-card h5 {
+    color: #1A2B3C;
+    font-weight: 700;
+    margin-top: 0; /* Adjust margin as image now has margin-bottom */
 }
 
-/* --- Clients Section Specifics --- */
+.team-card p.text-muted {
+    font-weight: 500;
+    color: #6c757d !important;
+}
+
+/* Clients Section */
+.clients-section {
+    background-color: #e9f5db; /* Light green background */
+}
+
 .client-card {
-    background-color: var(--white);
-    border: 1px solid #eee;
+    border: 1px solid #d4edda;
     border-radius: 10px;
-    padding: 1.8rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    min-height: 200px; /* Consistent height for client cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    padding: 25px; /* Add padding inside the card */
 }
 
 .client-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .client-card h5 {
-    color: var(--dark-green-teal); /* Changed to dark green/teal */
-    font-size: 1.25rem;
+    color: #1A2B3C;
+    font-weight: 700;
+    margin-bottom: 10px; /* Space below title */
 }
 
 .client-link {
-    color: var(--primary-green);
+    color: #8BC34A;
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .client-link:hover {
-    color: var(--dark-green-teal); /* Hover to dark green/teal */
+    color: #7BB03D;
     text-decoration: underline;
 }
 
-/* --- Contact Page Specifics --- */
-.contact-section {
-    padding-top: 100px; /* More space for fixed navbar */
-    padding-bottom: 80px;
-}
-
-.contact-form-card {
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.contact-info-item {
-    background-color: var(--white);
-    border: 1px solid #eee;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 150px; /* Ensure consistent height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-info-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-.contact-info-item .contact-icon {
-    font-size: 2.5rem;
-    color: var(--primary-green);
-    margin-bottom: 0.75rem;
-}
-
-.contact-info-item h5 {
-    color: var(--dark-green-teal); /* Changed to dark green/teal */
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.contact-info-item p {
-    font-size: 0.95rem;
-    color: var(--text-light);
-    margin-bottom: 0;
-}
-
-.contact-info-item a {
-    color: var(--primary-green);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info-item a:hover {
-    color: var(--dark-green-teal); /* Hover to dark green/teal */
-    text-decoration: underline;
-}
-
-
-/* --- Footer --- */
+/* Footer Styles */
 .footer {
-    background-color: var(--dark-green-teal) !important; /* Changed to dark green/teal */
-    color: var(--white);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    background-color: #1A2B3C !important; /* Dark blue from your palette */
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center; /* Center footer content for smaller screens */
 }
 
-.footer h5 {
-    color: var(--primary-green);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+/* On larger screens, align footer columns */
+.footer .col-md-4 {
+    text-align: left;
+}
+
+.footer .col-md-4:first-child { /* Specific alignment for the first column */
+    text-align: left;
+}
+
+.footer .col-md-4:last-child { /* Specific alignment for the last column */
+    text-align: left;
+}
+
+
+.footer .text-primary {
+    color: #8BC34A !important;
 }
 
 .footer ul {
-    padding-left: 0;
+    padding: 0;
+    list-style: none; /* Remove default list bullets */
 }
 
 .footer ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
 }
 
 .footer ul li a {
     color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer ul li a:hover {
-    color: var(--primary-green);
+    color: #fff;
 }
 
-.footer .text-white-50 {
-    color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 991.98px) { /* For smaller screens (below large breakpoint) */
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
     .navbar-collapse {
-        text-align: center;
-        background-color: var(--white);
-        border-top: 1px solid #eee;
-        padding-bottom: 1rem;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
 
-    .navbar-nav .nav-item {
-        margin: 0.2rem 0;
-    }
-
-    .nav-link.active {
-        border-bottom: none;
-        border-left: 3px solid var(--primary-green);
-        padding-left: 1rem;
-    }
-
-    .hero-section {
-        min-height: 60vh;
+    .navbar-nav .nav-link {
+        margin: 5px 0;
+        text-align: center; /* Center nav links on collapse */
     }
 
     .hero-section h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
-    .hero-section .lead {
+    .hero-section p.lead {
         font-size: 1.2rem;
     }
 
+    .about-section img {
+        margin-bottom: 25px; /* Add space below image on smaller screens */
+    }
+
+    /* For smaller screens, force mission/vision cards to stack and center text */
+    .mission-vision-card .card-body {
+        text-align: center;
+    }
+    .mission-vision-card .card-title {
+        justify-content: center; /* To center icon and text */
+        display: flex;
+        align-items: center;
+    }
+    .mission-vision-card ul {
+        text-align: left; /* Keep list items left-aligned within a centered card */
+        display: inline-block; /* Helps align content to left while block is centered */
+    }
+
+    .footer .col-md-4 {
+        text-align: center; /* Center footer columns on smaller screens */
+        margin-bottom: 20px; /* Add space between stacked columns */
+    }
+}
+
+@media (max-width: 767.98px) {
     .section-heading {
         font-size: 2rem;
     }
 
-    section {
-        padding: 60px 0;
+    .hero-section h1 {
+        font-size: 2rem;
     }
 
-    body {
-        padding-top: 70px; /* Adjust for smaller navbar on mobile */
+    .hero-section p.lead {
+        font-size: 1rem;
     }
 
-    .contact-section {
-        padding-top: 90px;
+    .service-card,
+    .team-card,
+    .client-card {
+        margin-bottom: 20px; /* Add some space between cards when they stack */
     }
 }
 
-@media (max-width: 767.98px) { /* For mobile screens */
-    .hero-section {
-        min-height: 50vh;
-    }
-
-    .hero-section h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-section .lead {
-        font-size: 1rem;
-    }
-
-    .section-heading {
-        font-size: 1.8rem;
-        margin-bottom: 3rem;
-    }
-
-    .custom-button {
-        width: 100%;
-        padding: 0.6rem 1.5rem;
-        font-size: 1rem;
-    }
-
-    .about-section .row,
-    .services-section .row,
-    .team-section .row,
-    .clients-section .row,
-    .contact-section .row {
-        text-align: center;
-    }
-
-    .about-section img {
-        margin-bottom: 2rem;
-    }
-
-    .contact-info-item {
-        margin-bottom: 1.5rem;
+@media (min-width: 768px) {
+    /* For larger screens, ensure footer columns are left-aligned again after media query resets */
+    .footer .col-md-4 {
+        text-align: left;
     }
 }
