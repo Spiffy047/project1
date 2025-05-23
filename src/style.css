@@ -1,0 +1,47 @@
+/* Common styles for both pages */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background for Bootstrap default */
+}
+
+h1 {
+    color: #343a40; /* Dark gray for headings */
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    /* Override Bootstrap's default primary button color */
+    background-color: #007bff; /* Bootstrap blue */
+    border-color: #007bff;
+
+    &:hover { /* Example of nesting if your preprocessor supports it */
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+}
+
+/* Specific styles for index.html */
+.index-page-content {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific styles for about.html */
+.about-page-content {
+    padding: 2.5rem;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff !important; /* Make brand prominent */
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff !important; /* Emphasize active link */
+}
